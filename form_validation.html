@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Form Validation</title>
+	<script type="text/javascript">
+	
+		function validate()
+		{
+			var x = document.getElementById("name") ;
+			var y = document.getElementById("em") ;
+			var z = document.getElementById("ph").value ;
+			var a = document.getElementById("gen") ;
+
+			if(x.value=="")
+			{
+				window.alert("Please fill in the name") ;
+			}
+
+			if( y.value.includes('@') == false)
+			{
+				window.alert("Please enter valid email") ;
+			}
+
+			if (z.length<10)
+				window.alert("Enter correct 10 digit ph no!");
+
+			if (a.checked==false)
+				window.alert("Thou art not a gender");
+
+		}
+	</script>
+</head>
+
+<body>
+	<form>
+		Enter name : 
+		<input id="name" type="text"><br>
+		
+		Enter email : 
+		<input type="text" id="em"><br>
+
+		Enter Phone no :
+		<input type="number" id="ph"><br>
+
+		Select Gender : <br>
+		<input type="radio" id="gen" name="male">Male<br>
+		<input type="radio" id="gen" name="female">Female<br>
+		<input type="radio" id="gen" name="rns">Rather not say<br>
+
+		<input type="submit" onclick="validate()">
+		<input type="reset">
+	</form>
+</body>
+
+</html>
